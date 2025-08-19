@@ -22,9 +22,14 @@ while True:
     # Draw rectangles around detected faces
     for (x, y, w, h) in faces:
         cv2.rectangle(frame, (x, y), (x+w, y+h), (0, 255, 0), 2)
-
+    
+    
+    cv2.putText(frame, "Press 'q' to quit", (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 
+                0.7, (255, 255, 255), 1)
+    
     # Show result
     cv2.imshow('Face Detection - press q to quit', frame)
+
 
     if cv2.waitKey(1) & 0xFF == ord('q'):
         break
