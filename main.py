@@ -24,7 +24,7 @@ while True:
         cv2.rectangle(frame, (x, y), (x+w, y+h), (0, 255, 0), 2)
 
     # Show result
-    cv2.imshow('Face Detection', frame)
+    cv2.imshow('Face Detection - press q to quit', frame)
 
     if cv2.waitKey(1) & 0xFF == ord('q'):
         break
